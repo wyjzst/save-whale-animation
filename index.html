@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>拯救瓜头鲸</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <script src="./js/rem.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+<div class="audwrap">
+    <audio id="mainmus" src="images/page1/bgm.mp3" loop="loop" autoplay="autoplay"></audio>
+</div>
+<div id="index">
+    <img class="bg" src="./images/page1/background.jpg" alt="">
+    <div class="flex">
+        <div class="loading"><img src="images/page1/loading.png" alt="">
+            <div class="bead" id="z"><img src="images/page1/bead.png"></div>
+            <div class="number" id="n">0</div>
+            <div class="progress" id="j" style="height: 0px;"></div>
+        </div>
+    </div>
+</div>
+
+<div id="btn">
+    <div class="cover"></div>
+    <div class="cover2" onclick="help()"></div>
+    <div class="cover3"></div>
+    <img id="div" class="bg2" src="images/page2/bg2.jpg" alt="">
+    <div id="showshark1" class="shark1"></div>
+    <div id="showshark2" class="shark2"></div>
+    <div id="showshark3" class="shark3"></div>
+    <div id="showshark4" class="shark4"></div>
+    <div id="tips" class="tips"></div>
+    <div id="tips2" class="tips2"></div>
+    <div id="showtip1" class="sharktip1"></div>
+    <div id="showtip2" class="sharktip2"></div>
+    <div id="showtip3" class="sharktip3"></div>
+    <div id="showtip4" class="sharktip4"></div>
+    <div class="sharkcover1"></div>
+    <div class="sharkcover2"></div>
+    <div class="sharkcover3"></div>
+    <div class="last">
+        <div class="last-mask">
+            <div onclick="jump3()" class="shark-news"></div>
+            <div class="sharkcover4"></div>
+        </div>
+    </div>
+    <img id="move" class="bubble" src="images/page2/bubble.png">
+    <img id="move2" class="fish" src="images/page2/fish.png">
+    <div class="arrow"><img src="images/page2/arrow.png" alt=""></div>
+    <div class="header"><img src="images/page2/header.png" alt=""></div>
+
+    <div id="box1" class="box">
+        <div class="prop">
+            <div id="inner-dropzone" class="dropzone"></div>
+            <div class="tool1 drag-drop"></div>
+            <div class="tool1-tip"></div>
+            <div class="tool2 drag-drop"></div>
+            <div class="tool2-tip"></div>
+            <div class="tool3 drag-drop"></div>
+            <div class="tool3-tip"></div>
+            <div class="tool4 drag-drop"></div>
+            <div class="tool4-tip"></div>
+        </div>
+    </div>
+</div>
+
+<section id="page3">
+    <img class="bg3" src="images/page3/bg3.jpg">
+    <div class="content">
+        <div class="container">
+            <div onclick="jumpToPage4()" class="pic"><img src="./images/page3/mic.png" alt=""></div>
+            <div class="pic"><img src="./images/page3/interview.png" alt=""></div>
+            <div class="pic" onclick="show1()"><img src="./images/page3/expert.png" alt=""></div>
+            <div class="pic" onclick="show2()"><img src="./images/page3/helper.png" alt=""></div>
+            <div class="pic" onclick="show3()"><img src="./images/page3/shark.png" alt=""></div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="flex">
+            <div class="boxMask">
+                <img class="p2" onclick="out1()" src="./images/page3/close.png" alt="">
+                <div class="p1">
+                    <video id="video1" width=100% height=100% controls="controls" x5-video-orientation="portraint"
+                           -webkit-playsinline playsinline>
+                        <source src="images/page3/expert.mp4">
+                        <source src="images/page3/expert.Ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask2">
+        <div class="flex">
+            <div class="boxMask">
+                <img class="p2" onclick="out2()" src="./images/page3/close.png" alt="">
+                <div class="p1">
+                    <video id="video2" width=100% height=100% controls="controls" x5-video-orientation="portraint"
+                           -webkit-playsinline playsinline>
+                        <source src="images/page3/helper.mp4">
+                        <source src="images/page3/helper.Ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask3">
+        <div class="flex">
+            <div class="boxMask2">
+                <img class="p2" onclick="out3()" src="./images/page3/close.png" alt="">
+                <img class="p1" src="./images/page3/doc.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bg4">
+    <div id="box">
+        <div class="l"><img src="./images/page4/pic1.png" alt=""></div>
+        <div class="r"><img src="./images/page4/tx1.png" alt=""></div>
+        <div class="l"><img src="./images/page4/pic2.png" alt=""></div>
+        <div class="r"><img src="./images/page4/tx2.png" alt=""></div>
+        <div class="l"><img src="./images/page4/pic3.png" alt=""></div>
+        <div class="r"><img src="./images/page4/tx3.png" alt=""></div>
+        <div class="l"><img src="./images/page4/pic4.png" alt=""></div>
+        <div class="r"><img src="./images/page4/tx4.png" alt=""></div>
+        <div class="l"><img src="./images/page4/pic5.png" alt=""></div>
+        <div class="r"><img src="./images/page4/tx5.png" alt=""></div>
+    </div>
+</div>
+
+<div class="bg5">
+    <div class="flex">
+        <div class="main">
+            <div class="flex">
+                <div class="box3">
+                    <img class="content2" onclick="out4()" src="images/page4/close1.png" alt="">
+                    <div class="content1">
+                        <video id="video3"  width=100% height="100%" controls="controls" x5-video-orientation="portraint"
+                               -webkit-playsinline playsinline>
+                            <source src="images/page4/interview.mp4">
+                            <source src="images/page4/interview.Ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="background5" src="./images/page5/bg5.jpg" alt="">
+        <div class="share">
+            <img src="images/page5/text-content.png" alt="">
+        </div>
+        <div class="share-arrow">
+            <img src="images/page5/share-arrow.png" alt="">
+        </div>
+    </div>
+</div>
+</body>
+<style>
+
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: static;
+    }
+
+    body {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-user-select: none;
+        font-size: 16px;
+        overflow: hidden;
+        overflow-X: auto;
+        box-sizing: border-box;
+        margin: 0;
+        height: 100%;
+        user-select: none;
+    }
+
+    #index {
+        display: block;
+    }
+
+    #btn {
+        display: none;
+    }
+
+    #page3 {
+        display: none;
+    }
+
+    /*@media screen and (orientation: portrait) and (max-width: 500px) {*/
+    /*    html, body {*/
+    /*        position: relative;*/
+    /*        overflow: hidden;*/
+    /*        width: 100%;*/
+    /*        height: 100%;*/
+    /*        padding: 0;*/
+    /*        margin: 0;*/
+    /*    }*/
+
+    /*    html::before {*/
+    /*        content: "";*/
+    /*        position: fixed;*/
+    /*        top: 0;*/
+    /*        left: 0;*/
+    /*        height: 100%;*/
+    /*        width: 100%;*/
+    /*        background: #333;*/
+    /*        z-index: 99;*/
+    /*    }*/
+
+    /*    html::after {*/
+    /*        content: "为了更好地体验,请开启手机的自动旋转功能(微信端需同时到我的页面-设置-通用-开启横屏模式)";*/
+    /*        !*text-align: center;*!*/
+    /*        font-size: 16px;*/
+    /*        color: #fff;*/
+    /*        position: absolute;*/
+    /*        top: 50%;*/
+    /*        left: 0;*/
+    /*        height: 30px;*/
+    /*        width: 84%;*/
+    /*        margin-left: 8%;*/
+    /*        margin-top: 50px;*/
+    /*        z-index: 99;*/
+    /*    }*/
+
+    /*    body::before {*/
+    /*        content: "";*/
+    /*        position: absolute;*/
+    /*        z-index: 99;*/
+    /*        height: 200px;*/
+    /*        width: 100px;*/
+    /*        left: 50%;*/
+    /*        top: 50%;*/
+    /*        margin: -140px 0 0 -50px;*/
+    /*        color: #fff;*/
+    /*        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB2CAYAAAAZUrcsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDAwMjcwNkVEQzczMTFFNjlFMDFGQTEzNkM3N0JBMTMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDAwMjcwNkREQzczMTFFNjlFMDFGQTEzNkM3N0JBMTMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0NzhCMTlBREM1ODExRTZCNTdFRjQ0Q0I1QzRCODZBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ0NzhCMTlCREM1ODExRTZCNTdFRjQ0Q0I1QzRCODZBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+J30rNQAACRRJREFUeNrsXQlsFVUU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");*/
+    /*        background-repeat: no-repeat;*/
+    /*        background-position: center center;*/
+    /*        background-size: 100px auto;*/
+    /*        -webkit-transform: rotateZ(-90deg);*/
+    /*    }*/
+    /*}*/
+
+    #index .flex {
+        align-items: center;
+    }
+
+    .bg {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        pointer-events: none;
+    }
+
+    .loading {
+        width: 13vw;
+        position: relative;
+        margin-left: 20px;
+        z-index: 2;
+    }
+
+    .loading img {
+        width: 100%;
+    }
+
+    .bead {
+        width: 0.3rem;
+        left: 29px;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+    }
+
+    .bead img {
+        width: 100%;
+    }
+
+    .number {
+        display: inline-block;
+        position: absolute;
+        top: 7.38rem;
+        left: 0.5rem;
+        transform: rotate(90deg);
+    }
+
+    .audwrap {
+        background: url(images/page1/music.png) center no-repeat;
+        background-size: 100%;
+        position: fixed;
+        width: 0.56rem;
+        height: 0.6rem;
+        right:0;
+        margin:6%;
+        bottom: 0.2rem;
+        animation: music 8s linear forwards infinite;
+        z-index: 20;
+    }
+
+    #j {
+        border-radius: 15px;
+        height: 0px;
+        width: 0.3rem;
+        position: absolute;
+        z-index: 2;
+        left: .58rem;
+        top: 5px;
+        background: url("images/page1/progress.png");
+        background-size: 100% 100%;
+    }
+
+    .cover {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .cover2 {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        z-index: 3;
+    }
+
+    .cover3 {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        z-index: 4;
+    }
+
+    .bg2 {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .bubble {
+        pointer-events: none;
+        width: 70vw;
+        position: absolute;
+        animation: move 6s  infinite
+    }
+
+    .fish {
+        pointer-events: none;
+        width: 70vw;
+        position: absolute;
+        animation: move2 6s  infinite
+    }
+
+
+    .shark1 {
+        height: 6rem;
+        width: 2.5rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url("./images/page2/shark1.png");
+        background-size: 100% 100%;
+        animation: shark 4s infinite;
+        opacity: 1;
+    }
+
+    .shark2 {
+        height: 6rem;
+        width: 2.5rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url("./images/page2/shark2.png");
+        background-size: 100% 100%;
+        animation: shark 4s infinite;
+        opacity: 0;
+    }
+
+    .shark3 {
+        height: 6rem;
+        width: 2.5rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url("./images/page2/shark3.png");
+        background-size: 100% 100%;
+        animation: shark 4s infinite;
+        opacity: 0;
+    }
+
+    .shark4 {
+        height: 6rem;
+        width: 2.5rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url("./images/page2/shark4.png");
+        background-size: 100% 100%;
+        opacity: 0;
+    }
+
+    .tips {
+        height: 3.4rem;
+        width: 1.5rem;
+        position: fixed;
+        top: 6%;
+        left: 8%;
+        z-index: 2;
+        background-image: url("./images/page2/tips.png");
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+
+    .tips2 {
+        height: 3.4rem;
+        width: 1.5rem;
+        position: fixed;
+        top: 6%;
+        left: 8%;
+        z-index: 2;
+        background-image: url("./images/page2/tips2.png");
+        background-size: 100% 100%;
+        opacity: 0;
+    }
+
+    .sharktip1 {
+        height: 4rem;
+        width: 1rem;
+        position: fixed;
+        right: 10%;
+        top: 41%;
+        z-index: 2;
+        background-image: url("./images/page2/sharktip1.png");
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+
+    .sharktip2 {
+        height: 4rem;
+        width: 1rem;
+        position: fixed;
+        right: 10%;
+        top: 43%;
+        z-index: 2;
+        background-image: url("./images/page2/sharktip2.png");
+        background-size: 100% 100%;
+        opacity: 0;
+        /*display: none;*/
+    }
+
+    .sharktip3 {
+        height: 4rem;
+        width: 1rem;
+        position: fixed;
+        right: 10%;
+        top: 43%;
+        z-index: 2;
+        background-image: url("./images/page2/sharktip3.png");
+        background-size: 100% 100%;
+        opacity: 0;
+        /*display: none;*/
+    }
+
+    .sharktip4 {
+        width: 3rem;
+        height: 4.5rem;
+        position: fixed;
+        right: 10%;
+        top: 6%;
+        z-index: 2;
+        background-image: url("./images/page2/sharktip4.png");
+        background-size: 100% 100%;
+        animation: big 1.5s infinite;
+        opacity: 0;
+        /*display: none;*/
+    }
+
+    .arrow {
+        width: .5rem;
+        height: .5rem;
+        position: fixed;
+        bottom: 5%;
+        right: 43%;
+        pointer-events: none;
+        display: none;
+        animation: arrow 2s infinite;
+    }
+
+    .arrow img {
+        width: 100%;
+    }
+
+    .header {
+        height: 7.5rem;
+        position: fixed;
+        top: 20%;
+        right: 11%;
+        pointer-events: none;
+        display: none;
+    }
+
+    .header img {
+        height: 100%;
+    }
+
+    .box {
+        width: 1.2rem;
+        height: 5rem;
+        position: fixed;
+        bottom: 4%;
+        left: 5%;
+        background-image: url(./images/page2/prop.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: none;
+        z-index: 4;
+    }
+
+    .prop {
+        height: .7rem;
+        width: 3rem;
+        position: relative;
+    }
+
+    .prop .tool1 {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 94%;
+        left: 3%;
+        background-image: url(./images/page2/tool1.png);
+        background-size: 100% 100%;
+        display: none;
+        touch-action: none;
+        transform: translate(0px, 0px);
+    }
+
+    .prop .tool1-tip {
+        height: 2.3rem;
+        width: .7rem;
+        position: absolute;
+        top: 96px;
+        left: 9%;
+        background-image: url(./images/page2/tool1-tip.png);
+        background-size: 100% 100%;
+        display: none;
+    }
+
+    .sharkcover1 {
+        height: 6.6rem;
+        width: 3.1rem;
+        position: fixed;
+        top: 25%;
+        left: 28%;
+        background-image: url(./images/page2/tool1-use.png);
+        background-size: 100% 100%;
+        opacity: 0;
+    }
+
+    .prop .tool2 {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 94%;
+        left: 3%;
+        background-image: url(./images/page2/tool2.png);
+        background-size: 100% 100%;
+        display: none;
+        touch-action: none;
+        transform: translate(0px, 0px);
+    }
+
+    .prop .tool2-tip {
+        height: 2.3rem;
+        width: .7rem;
+        position: absolute;
+        top: 96px;
+        left: 9%;
+        background-image: url(./images/page2/tool2-tip.png);
+        background-size: 100% 100%;
+        display: none;
+    }
+
+    .sharkcover2 {
+        height: 6rem;
+        width: 2.1rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url(./images/page2/tool2-use.png);
+        background-size: 100% 100%;
+        opacity: 0;
+    }
+
+    .prop .tool3 {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 94%;
+        left: 3%;
+        background-image: url(./images/page2/tool3.png);
+        background-size: 100% 100%;
+        display: none;
+        touch-action: none;
+        transform: translate(0px, 0px);
+    }
+
+    .prop .tool3-tip {
+        height: 2.3rem;
+        width: .7rem;
+        position: absolute;
+        top: 96px;
+        left: 9%;
+        background-image: url(./images/page2/tool3-tip.png);
+        background-size: 100% 100%;
+        display: none;
+    }
+
+    .sharkcover3 {
+        height: 7.7rem;
+        width: 3.8rem;
+        position: fixed;
+        top: 25%;
+        left: 33%;
+        background-image: url(./images/page2/tool3-use.png);
+        background-size: 100% 100%;
+        opacity: 0;
+    }
+
+    .prop .tool4 {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 94%;
+        left: 3%;
+        background-image: url(./images/page2/tool4.png);
+        background-size: 100% 100%;
+        display: none;
+        touch-action: none;
+        transform: translate(0px, 0px);
+    }
+
+    .prop .tool4-tip {
+        height: 2.3rem;
+        width: .7rem;
+        position: absolute;
+        top: 96px;
+        left: 9%;
+        background-image: url(./images/page2/tool4-tip.png);
+        background-size: 100% 100%;
+        display: none;
+    }
+
+    .last {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: none;
+        z-index: 5;
+    }
+
+    .last-mask {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        background: #00000075;
+    }
+
+    .sharkcover4 {
+        width: 5rem;
+        height: 12.5rem;
+        background-image: url("./images/page2/tool4-use.png");
+        background-size: 100% 100%;
+    }
+
+    .last .shark-news {
+        background-image: url(images/page2/go.png);
+        height: 2.4rem;
+        width: .8rem;
+        bottom: 50%;
+        margin: 20px;
+        background-size: 100% 100%;
+    }
+
+    .dropzone {
+        width: 4rem;
+        height: 1.5rem;
+        position: fixed;
+        top: 30%;
+        left: 20%;
+        background-color: transparent;
+        background-size: 100% 100%;
+    }
+
+    .fadein {
+        opacity: 1;
+        transition:opacity 1s;
+    }
+
+    .fadeout {
+        opacity: 0;
+        transition:opacity 1s;
+    }
+
+    .fadeout1 {
+        opacity: 0;
+        transition:opacity 1s;
+    }
+
+    .fadein1 {
+        opacity: 1;
+        transition:opacity 1s;
+    }
+
+    .fadein2 {
+        opacity: 1;
+        transition:opacity 1s;
+    }
+
+    .fadeout2 {
+        opacity: 0;
+        transition:opacity 1s;
+    }
+
+    .fadeout3{
+        opacity: 0;
+        transition:opacity 1s;
+    }
+
+    .fadein3 {
+        opacity: 1;
+        transition:opacity 1s;
+    }
+
+    .restart {
+        animation: music 8s linear forwards infinite;
+    }
+    .pause {
+        animation-play-state: paused;
+    }
+
+    @keyframes music {
+        0% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(450deg);
+        }
+    }
+
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes move {
+        0% {
+            left: 5%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            left: 5%;
+        }
+        50% {
+            left: 0;
+        }
+        100% {
+            left: 5%;
+        }
+    }
+
+    @keyframes shark {
+        0% {
+            left: 30%;
+        }
+        50% {
+            left: 35%;
+        }
+        100% {
+            left: 30%;
+        }
+    }
+
+    @keyframes big {
+        0% {
+            transform: scale(0.7);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0.7);
+        }
+    }
+
+    @keyframes big2 {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    @keyframes arrow {
+        0% {
+            left: 13%;
+            bottom: 43%;
+        }
+
+        50% {
+            left: 16%;
+            bottom: 45%;
+        }
+
+        100% {
+            left: 13%;
+            bottom: 43%;
+        }
+    }
+
+    @keyframes arrow2 {
+        0% {
+            right: 6%;
+            top: 5%;
+        }
+
+        50% {
+            right: 1%;
+            top: 1%;
+        }
+
+        100% {
+            right: 6%;
+            top: 5%;
+        }
+    }
+
+    #page3 {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bg3 {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        pointer-events: none;
+
+    }
+
+    #page3 .content {
+        width: 100vw;
+        height: 80vh;
+        padding-top: 20vh;
+        display: flex;
+        justify-content: center;
+        transform: translateX(-10%);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container .pic {
+        margin-top: 20px;
+        height: 1.8rem;
+        z-index: 3;
+    }
+
+    .pic img {
+        height: 100%;
+    }
+
+    .container .pic:nth-child(1) {
+        height: 2rem;
+        transform: translateY(-15%);
+        animation:big2 3s infinite;
+        margin: 0;
+    }
+
+    .container .pic:nth-child(2) {
+        height: 3rem;
+        margin: 0;
+        transform: translateX(40%);
+    }
+
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.54);
+    }
+
+    .mask .boxMask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mask .p1 {
+        width: 64vh;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./images/page3/mask.png);
+        background-size: 100% 100%;
+        padding: 4px;
+        transform: translateX(-18%) rotate(90deg);
+    }
+
+    .mask .p2 {
+        width: 8%;
+        margin-left: 20px;
+    }
+
+    .mask2 {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.54);
+    }
+
+    .mask2 .boxMask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mask2 .p1 {
+        width: 64vh;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./images/page3/mask.png);
+        background-size: 100% 100%;
+        padding: 4px;
+        transform: translateX(-18%) rotate(90deg);
+    }
+
+    .mask2 .p2 {
+        width: 8%;
+        margin-left: 20px;
+    }
+
+    .mask3 {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        background: rgba(0,0,0,.54);
+    }
+
+    .mask3 .boxMask2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .mask3 .p1 {
+        margin-left: 30px;
+        width: 50%;
+    }
+
+    .mask3 .p2 {
+        width: 10%;
+        margin-left: 20px;
+    }
+
+    .bg4 {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+
+    .bg4 #box {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/page4/bg4.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .bg4 .l {
+        position: absolute;
+        top: 10%;
+        left: 28%;
+        width: 40vw;
+        margin-right: 2vw;
+        display: none;
+    }
+
+    .bg4 .l img {
+        width: 100%;
+    }
+
+    .bg4 .r {
+        position: absolute;
+        top: 55%;
+        right: 32%;
+        width: 40vw;
+        display: none;
+    }
+
+    .bg4 .r img {
+        width: 100%;
+    }
+
+    .bg5 {
+        display: none;
+    }
+
+    .bg5 .main {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        background: rgba(0,0,0,.54);
+    }
+
+    .bg5 .box3 {
+        display: flex;
+        align-items: center;
+    }
+
+    .main .content1 {
+        width: 64vh;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./images/page4/mask1.png);
+        background-size: 100% 100%;
+        padding: 4px;
+        transform: translateX(-15%) rotate(90deg);
+    }
+
+    .main .content2 {
+        width: 8%;
+        height: 10vh;
+        margin-left: 20px;
+        background-image: url(./images/page3/close.png);
+        background-size: 100% 100%;
+    }
+
+
+    .bg5 {
+        position: absolute;
+        top: 0;
+    }
+
+    .bg5 .flex {
+        align-items: center;
+    }
+
+    .background5 {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .share {
+        height: 100vw;
+        margin-left: 10%;
+        z-index: 2;
+    }
+
+    .share img {
+        height: 100%;
+    }
+
+    .share-arrow {
+        height: .5rem;
+        width: .5rem;
+        position: fixed;
+        bottom: 5%;
+        right: 43%;
+        pointer-events: none;
+        /*display: none;*/
+        animation: arrow2 2s infinite;
+    }
+
+    .share-arrow img {
+        width: 100%;
+    }
+
+    .flex {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<script>
+    window.onload = function() {
+        //进度条加载
+        startMove()
+        //初始化音乐，并直接进行播放
+        initMusic();
+    };
+
+    //进度条加载动画
+    function startMove() {
+        let oDiv = document.getElementById('z')
+        let bDiv = document.getElementById('j')
+        let nDiv = document.getElementById('n')
+        const timer = setInterval(function () {
+            let speed = 5
+            if (oDiv.offsetTop < 340) {
+                oDiv.style.top = oDiv.offsetTop + speed + 'px'
+                nDiv.innerHTML = String(Math.floor((oDiv.offsetTop + speed) / 340 * 100) - 1)
+                bDivHeightNum = parseInt(bDiv.style.height.substr(0, bDiv.style.height.length - 2))
+                if (bDivHeightNum === 0) {
+                    bDivHeightNum = 10
+                }
+                if (nDiv.innerHTML === "100") {
+                    document.getElementById('index').style.display = 'none'
+                    document.getElementById('btn').style.display = 'block'
+                }
+                if (bDivHeightNum > 400 ){
+                clearInterval(timer)
+                }
+                bDiv.style.height = (bDivHeightNum + speed) + 'px'
+                }
+        }, 30)
+    }
+
+
+    //ios 自动播放
+    function initMusic() {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            //微信H5环境，监听WeixinJSBridgeReady事件，再次进行play
+            //iOS 微信H5页面能够自动播放
+            document.querySelector('audio').play();
+        }, false);
+    }
+
+    let btn = document.getElementById("btn")
+    let dv = document.getElementById("div")
+    let dvT = dv.scrollTop
+    let timer
+    let clickTime = false
+    let isclick = true
+    const tip1 = document.getElementById("showtip1")
+    const tip2 = document.getElementById("showtip2")
+    const tip3 = document.getElementById("showtip3")
+    const tip4 = document.getElementById("showtip4")
+    const img1 = document.getElementById("showshark1")
+    const img2 = document.getElementById("showshark2")
+    const img3 = document.getElementById("showshark3")
+    const img4 = document.getElementById("showshark4")
+    const tips1 = document.getElementById("tips")
+    const tips2 = document.getElementById("tips2")
+    const box = document.getElementById("box1")
+
+    // 鲨鱼移动
+    function long() {
+        isclick = false
+        timer = setInterval(function () {
+            dvT += 5
+            window.scrollTo(0, dvT)
+            // console.log(dvT)
+            if (dvT > pleft1) {
+                tip1.classList.add("fadeout");
+                img1.classList.add("fadeout");
+                tip2.classList.add("fadein");
+                img2.classList.add("fadein");
+            }
+            if (dvT > pleft2) {
+                tip2.classList.add("fadeout");
+                img2.classList.add("fadeout");
+                img3.classList.add("fadein");
+                tip3.classList.add("fadein");
+            }
+            if (dvT > (pleft3)) {
+                tip3.classList.add("fadeout");
+                img3.classList.add("fadeout");
+                img4.classList.add("fadein");
+                tip4.classList.add("fadein");
+            }
+            if (dvT > (pleft3 + 5)) {
+                tips1.classList.add("fadeout");
+                tips2.classList.add("fadein");
+                document.querySelector(".cover2").style.display = "block"
+            }
+            if (dvT > (pleft3 + 15)) {
+                clearTimeout(clickTime)
+                clearInterval(timer)
+                // document.addEventListener('touchstart', function (event) {
+                //     event.preventDefault()
+                // }, false)
+            }
+
+            if (document.querySelector(".cover3").style.display === "block") {
+                // document.addEventListener('touchend', function (event) {
+                //     event.preventDefault()
+                // }, false)
+                tips2.style.display = "none"
+                tip4.style.display = "none"
+            }
+
+            if (document.querySelector(".shark-news").style.display === "block") {
+                document.querySelector(".shark-news").addEventListener('touch', function (e) {
+                    document.getElementById('btn').style.display = "none"
+                    document.getElementById('page3').style.display = "block"
+                }, false)
+            }
+        }, 20)
+    }
+
+
+    const bub = document.getElementById('move')
+    const fish = document.getElementById('move2')
+
+    btn.ontouchstart = function () {
+        isclick = true
+        clearTimeout(clickTime)
+        clickTime = setTimeout(long, 1000)
+    }
+    btn.ontouchend = function () {
+        clearTimeout(clickTime)
+        clearInterval(timer)
+    }
+
+    function help() {
+        tips2.style.display = "none"
+        tip4.style.display = "none"
+        box.style.display = "block"
+        document.querySelector(".arrow").style.display = "block"
+        document.querySelector(".header").style.display = "block"
+        document.querySelector(".tool1").style.display = "block"
+        document.querySelector(".tool1-tip").style.display = "block"
+        document.querySelector(".cover3").style.display = "block"
+    }
+
+    // 计算背景图片在不同尺寸下的宽度
+
+    let phoneh = window.innerHeight                     // img图片在不同设备下的窗口的高度
+    let phonew = window.innerWidth                      // img图片在不同设备下的窗口的宽度
+    let phonebfbw = window.innerWidth / 100               // img图片在不同设备下的窗口的宽度的百分之1%
+    let picw = Math.round((6500 * phonew) / 750)            // img图片在不同设备下的窗口的背景图片宽度
+    let pleft1 = picw * 0.227
+    let pleft2 = picw * 0.47
+    let pleft3 = picw * 0.77
+
+
+    // 拖动道具
+    interact('.dropzone').dropzone({
+        accept: '.tool1 .tool2 .tool3 .tool4',
+        overlap: 0.75,
+    })
+
+    //监听道具移动
+    function dragMoveListener(event) {
+        var target = event.target
+        // keep the dragged position in the data-x/data-y attributes
+        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+        // translate the element
+        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+        // update the posiion attributes
+        target.setAttribute('data-x', x)
+        target.setAttribute('data-y', y)
+
+
+        const t1 = document.querySelector(".tool1")
+        const t1t = document.querySelector(".tool1-tip")
+        const t2 = document.querySelector(".tool2")
+        const t2t = document.querySelector(".tool2-tip")
+        const t3 = document.querySelector(".tool3")
+        const t3t = document.querySelector(".tool3-tip")
+        const t4 = document.querySelector(".tool4")
+        const t4t = document.querySelector(".tool4-tip")
+
+        // 每个图标拖动的事件
+
+        t1.ontouchend = function () {
+            if (x > 5 || y < -5) {
+                document.querySelector(".shark4").classList.add("fadeout");
+                document.querySelector(".sharkcover1").classList.add("fadein");
+                t1.style.display = "none"
+                t1.style.animation = "fadeout 1s 1"
+                t1t.style.display = "none"
+                t2.style.display = "block"
+                t2t.style.display = "block"
+                t2.style.animation = "fadein 1s 1"
+            }
+        }
+
+        t2.ontouchstart = function () {
+            document.querySelector(".sharkcover1").classList.add("fadeout1");
+            document.querySelector(".shark4").classList.add("fadein1");
+        }
+
+
+        t2.ontouchend = function () {
+            if (x > 5 || y < -5) {
+                document.querySelector(".sharkcover2").classList.add("fadein1");
+                document.querySelector(".shark4").classList.add("fadeout1");
+                t2.style.display = "none"
+                t2t.style.display = "none"
+                t3.style.display = "block"
+                t3t.style.display = "block"
+            }
+        }
+
+        t3.ontouchstart = function () {
+            document.querySelector(".sharkcover2").classList.add("fadeout2");
+            document.querySelector(".shark4").classList.add("fadein2");
+        }
+
+
+        t3.ontouchend = function () {
+            if (x > 5 || y < -5) {
+                document.querySelector(".sharkcover3").classList.add("fadein2");
+                document.querySelector(".shark4").classList.add("fadeout2");
+                t3.style.display = "none"
+                t3t.style.display = "none"
+                t4.style.display = "block"
+                t4t.style.display = "block"
+            }
+        }
+
+        t4.ontouchstart = function () {
+            document.querySelector(".sharkcover3").classList.add("fadeout3");
+            document.querySelector(".shark4").classList.add("fadein3");
+        }
+
+
+        t4.ontouchend = function () {
+            if (x > 5 || y < -5) {
+                document.querySelector(".last").style.display = "block"
+                document.querySelector(".sharktip4").style.display = "none"
+                document.querySelector(".tips2").style.display = "none"
+                document.querySelector(".box").style.display = "none"
+                document.querySelector(".header").style.display = "none"
+                document.querySelector(".arrow").style.display = "none"
+                t4.style.display = "none"
+                t4t.style.display = "none"
+            }
+        }
+
+
+    }
+
+    // this function is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener
+
+    interact('.drag-drop')
+        .draggable({
+            inertia: true,
+            modifiers: [
+                interact.modifiers.restrictRect({
+                    restriction: 'parent',
+                    endOnly: true
+                })
+            ],
+            autoScroll: true,
+            listeners: {move: dragMoveListener}
+        })
+
+    // BGM 的播放与暂停
+        $(".audwrap").on("click", function () {
+            if ($(this).hasClass("on")) {
+                $(this).removeClass("on");
+                document.getElementById("mainmus").play();
+                document.querySelector(".audwrap").classList.remove("pause");
+                document.querySelector(".audwrap").classList.add("restart");
+            } else {
+                $(this).addClass("on");
+                document.getElementById("mainmus").pause();
+                document.querySelector(".audwrap").classList.add("pause");
+            }
+        })
+
+    // video视频的显示和隐藏
+
+    const v1 = document.getElementById("video1")
+    const v2 = document.getElementById("video2")
+    const v3 = document.getElementById("video3")
+
+    function show1() {
+        $(".mask").fadeToggle()
+        document.getElementById("mainmus").pause();
+        document.querySelector(".audwrap").classList.add("pause");
+
+    }
+
+    function show2() {
+        $(".mask2").fadeToggle()
+        document.getElementById("mainmus").pause();
+        document.querySelector(".audwrap").classList.add("pause");
+    }
+
+    function show3() {
+        $(".mask3").fadeToggle()
+        // document.getElementById("mainmus").pause();
+        // document.querySelector(".audwrap").classList.add("pause");
+    }
+
+    function out1() {
+        $(".mask").fadeToggle()
+        document.getElementById("mainmus").play();
+        if ($(".audwrap").hasClass("restart")) {
+            $(".audwrap").removeClass("restart");
+        } else {
+           $(".audwrap").addClass("restart");
+        }
+
+        if ($(".audwrap").hasClass("pause")) {
+            $(".audwrap").removeClass("pause");
+        }
+        v1.pause()
+    }
+
+    function out2() {
+        $(".mask2").fadeToggle()
+        document.getElementById("mainmus").play();
+        if ($(".audwrap").hasClass("restart")) {
+            $(".audwrap").removeClass("restart");
+        } else {
+            $(".audwrap").addClass("restart");
+        }
+
+        if ($(".audwrap").hasClass("pause")) {
+            $(".audwrap").removeClass("pause");
+        }
+        v2.pause()
+    }
+
+    function out3() {
+        $(".mask3").fadeToggle()
+        // document.getElementById("mainmus").play();
+        // if ($(".audwrap").hasClass("restart")) {
+        //     $(".audwrap").removeClass("restart");
+        // } else {
+        //     $(".audwrap").addClass("restart");
+        // }
+        //
+        // if ($(".audwrap").hasClass("pause")) {
+        //     $(".audwrap").removeClass("pause");
+        // }
+    }
+
+    function out4() {
+        $(".main").fadeToggle()
+        document.getElementById("mainmus").play();
+        if ($(".audwrap").hasClass("restart")) {
+            $(".audwrap").removeClass("restart");
+        } else {
+            $(".audwrap").addClass("restart");
+        }
+
+        if ($(".audwrap").hasClass("pause")) {
+            $(".audwrap").removeClass("pause");
+        }
+        v3.pause()
+    }
+
+    let startBg4 = false
+
+    function jump3() {
+        document.getElementById('btn').style.display = "none"
+        document.getElementById('page3').style.display = "block"
+    }
+
+    function jumpToPage4() {
+        $('.bg4').show()
+        $("#box .l").eq(0).fadeIn(1000)
+        $("#box .r").eq(0).fadeIn(1000)
+        var i = 0
+
+        function fad() {
+            var m = i % 5
+            var n = (i + 1) % 5
+            $("#box .l").eq(m).fadeOut(1000)
+            $("#box .l").eq(n).fadeIn(1000)
+            $("#box .r").eq(m).fadeOut(1000)
+            $("#box .r").eq(n).fadeIn(1000)
+            i++
+        }
+
+        int = setInterval(fad, 6000)    // 持续时间
+
+        function dis() {
+            $('.bg4').hide()
+            $('.bg5').show()
+            document.getElementById("mainmus").pause();
+            document.querySelector(".audwrap").classList.add("pause");
+        }
+
+        setTimeout(dis, 30000)          // 总播放时间
+    }
+
+
+</script>
+
+</html>

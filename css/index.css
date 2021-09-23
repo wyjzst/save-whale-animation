@@ -1,0 +1,40 @@
+.bg {
+    background-image: url(../images/background.jpg);
+    height: 100vh;
+    background-size: auto 100vh;
+}
+.loading {
+    width: 50vw;
+    transform: translate(50%,-30%);
+    position: absolute;
+    bottom: 0;
+}
+
+.loading img {
+    width: 100%;
+}
+
+.bead {
+    width: 1rem;
+    left: 5px;
+    position: absolute;
+    top: 2px;
+    z-index: 2;
+}
+
+.bead img {
+    width: 100%;
+}
+
+.number {
+    position: absolute;
+    top: .2rem;
+    right: 1.4rem;
+}
+
+.progress {
+    width: 87%;
+    position: absolute;
+    top: .2rem;
+    left: .4rem;
+}
